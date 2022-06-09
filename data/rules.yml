@@ -2,12 +2,57 @@ version: "3.1"
 
 rules:
 
+- rule: Say hi anytime the user greets
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Trigger Day Today
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: ask_day
+  - action: action_give_day
+
+- rule: Trigger Restaurant Location
+  steps:
+  - intent: ask_location
+  - action: utter_location
+
+- rule: Trigger Restaurant Opening times
+  steps:
+  - intent: ask_opening_hours
+  - action: utter_opening_hours
+
+- rule: Trigger Restaurant contact
+  steps:
+  - intent: ask_contact
+  - action: utter_contact
+
+- rule: Trigger Restaurant Delivery
+  steps:
+  - intent: ask_delivery
+  - action: utter_delivery
+
+- rule: Trigger Restaurant food to go
+  steps:
+  - intent: aks_to_go_pizza
+  - action: utter_to_go_pizza
+
+- rule: Trigger Restaurant seat wish
+  steps:
+  - intent: ask_seat_place_wishes
+  - action: utter_seat_place_wishes
+
+- rule: Trigger Restaurant menu card
+  steps:
+  - intent: ask_menu_card
+  - action: utter_menu_card
+
+- rule: Trigger Restaurant food price
+  steps:
+  - intent: ask_food_price
+  - action: action_give_food_price

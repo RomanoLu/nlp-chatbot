@@ -89,3 +89,157 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: ask_location
+  examples: |
+    - where is your restaurant
+    - where can I find your restaurant
+    - where is your local based
+    - how can i find your restaurant
+    - how can i find your local
+    - how do i get to the local
+    - how do i get to the restaurant
+
+- intent: ask_opening_hours
+  examples: |
+    - until when can i visit your local
+    - what time is the restaurant open
+    - what time do you open
+    - what time are you open
+    - when are you open
+    - when is your opening time
+    - when is your opening hours
+    - when will you be open
+    - when can i come
+    - when can i eat
+
+- intent: ask_contact
+  examples: |
+    - how can i contact you
+    - how can i message you
+    - how can i call you
+    - what is your phone number
+    - what is your email 
+    - do you have a number
+    - do you have email
+
+- intent: ask_delivery
+  examples: |
+    - do you have delivery service
+    - can you bring the food to my home
+    - can you deliver food to my home
+    - do you bring food to my home
+
+- intent: aks_to_go_pizza
+  examples: |
+    - can i take food to go
+    - can i take food away
+    - can i take food with me
+    - what if i do not finish the food
+    - do i have to throw food away
+    - what if i cant anymore
+    - what if i am not hungry anymore
+
+- intent: ask_menu_card
+  examples: |
+    - do you have a menu card
+    - do you possess a menu card
+    - show me your card
+    - show me your menus
+    - show me your food
+    - i want a card
+    - i want to see your card
+    - which menus do you offer
+    - what can i eat
+    - what can i have to eat
+    - which kind of food do you offer
+
+- intent: ask_seat_place_wishes
+  examples: |
+    - where can i sit
+    - can i sit everywhere
+    - do you have a free table
+  
+
+
+- intent: ask_food_price
+  examples: |
+    - how much does [pizza](dish) cost
+    - how much does [pasta](dish) cost
+    - how much does [antipasti](dish) cost
+    - how much does [dolce](dish) cost
+    - how much does [carne](dish) cost
+    - what does [pizza](dish) cost
+    - what is the price of [pizza](dish)
+    - what is the price of [pasta](dish)
+    - what is the price of [antipasti](dish)
+    - what is the price of [dolce](dish)
+    - what is the price of [carne](dish)
+
+- intent: reserve
+  examples: |
+    - i want to reserve
+    - can i reserve
+    - can i have a reservation
+    - i want a reservation
+
+- intent: inform_time
+  examples: |
+    - [8am](time)
+    - [9pm](time)
+    - [12am](time)
+    - [1pm](time)
+    - [2pm](time)
+    - [3pm](time)
+    - [2am](time)
+    - [1am](time)
+
+- intent: inform_date
+  examples: |
+    - [today](date)
+    - [tomorrow](date)
+    - [monday](date)
+    - [tuesday](date)
+    - [wednesday](date)
+    - [thursday](date)
+    - [friday](date)
+    - [saturday](date)
+    - [sunday](date)
+
+
+responses:
+  utter_ask_email:
+  - text: "What is your email address?"
+
+  utter_ask_date:
+  - text: "Which day you want to come?"
+
+  utter_ask_time:
+  - text: "Which time?"
+
+  utter_menu_card:
+  - text: "You can look at our Menu here: ...."
+
+  utter_invoice:
+  - text: "You will always get an invoice after ordering something."
+
+  utter_seat_place_wishes:
+  - text: "We will try to accommodate your seating request. Unfortunately this is not always possible."
+
+  utter_to_go_pizza:
+  - text: "Of cource you can take your pizza home."
+
+  utter_delivery:
+  - text: "Unfortunately we do not offer a delivery service yet. We plan to test it in 2023."
+
+  utter_payment_methods:
+  - text: "We accept the following payment methods: cash, card, Bitcoin or you can wash our dishes ;)"
+
+  utter_contact:
+  - text: "You can call us (+49 123 456789)"
+
+  utter_opening_hours:
+  - text: "We are open from Monday to Sunday between 3 pm and 11 pm."
+
+  utter_location:
+  - text: "Pizzaria Romano is in the Marktstraße 1, 72793 Pfullingen."

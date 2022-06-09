@@ -8,6 +8,52 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_day
+  - ask_location
+  - ask_opening_hours
+  - ask_contact_data
+  - ask_dilivery
+  - aks_to_go_pizza
+  - aks_reservation
+  - ask_menu_card
+  - ask_food_price
+  - inform_date
+  - inform_email
+  - reserve
+  - inform_time
+
+entities:
+- dish
+- email
+- date
+- time
+
+forms:
+  reservation_form:
+    required_slots:
+      - date
+      - time
+      - email
+
+slots:
+  date:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: date
+  time:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: time
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: email
 
 responses:
   utter_greet:
@@ -32,3 +78,8 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions:
+- action_give_day
+- action_give_food_price
+- action_confirm_reservation
