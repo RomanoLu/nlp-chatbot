@@ -160,8 +160,6 @@ nlu:
     - can i sit everywhere
     - do you have a free table
   
-
-
 - intent: ask_food_price
   examples: |
     - how much does [pizza](dish) cost
@@ -206,6 +204,18 @@ nlu:
     - [saturday](date)
     - [sunday](date)
 
+- intent: inform
+  examples: |
+    - [rock](choice)
+    - [paper](choice)
+    - [scissors](choice)
+
+- intent: ask_play
+  examples: |
+      - can we play
+      - im boring
+      - lets play something
+      - can you play rock paper scissors
 
 responses:
   utter_ask_email:

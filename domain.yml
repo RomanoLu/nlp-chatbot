@@ -11,8 +11,8 @@ intents:
   - ask_day
   - ask_location
   - ask_opening_hours
-  - ask_contact_data
-  - ask_dilivery
+  - ask_contact
+  - ask_delivery
   - aks_to_go_pizza
   - aks_reservation
   - ask_menu_card
@@ -21,12 +21,15 @@ intents:
   - inform_email
   - reserve
   - inform_time
+  - ask_play
+  - inform
 
 entities:
 - dish
 - email
 - date
 - time
+- choice
 
 forms:
   reservation_form:
@@ -54,10 +57,19 @@ slots:
     mappings:
     - type: from_entity
       entity: email
+  choice: 
+    type: categorical
+    values:
+    - rock
+    - paper
+    - scissor
+    mappings:
+    - type: from_entity
+      entity : choice  
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hello welcome to Pizzaria Romano, how can i help you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -75,6 +87,12 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_play:
+  - text: "Type 'rock', 'paper' or 'scissor' to play."
+
+  utter_play_again:
+  - text: "Do you want to play again?"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -83,3 +101,4 @@ actions:
 - action_give_day
 - action_give_food_price
 - action_confirm_reservation
+- action_play_rps
