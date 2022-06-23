@@ -89,20 +89,24 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - who are you?
 
 - intent: ask_location
   examples: |
     - where is your restaurant
+    - where can I find you
     - where can I find your restaurant
     - where is your local based
     - how can i find your restaurant
     - how can i find your local
     - how do i get to the local
     - how do i get to the restaurant
+    - where are you
 
 - intent: ask_opening_hours
   examples: |
     - until when can i visit your local
+    - what are your opening times
     - what time is the restaurant open
     - what time do you open
     - what time are you open
@@ -122,6 +126,8 @@ nlu:
     - what is your email 
     - do you have a number
     - do you have email
+    - can i call someone
+    - can i call you
 
 - intent: ask_delivery
   examples: |
@@ -159,6 +165,14 @@ nlu:
     - where can i sit
     - can i sit everywhere
     - do you have a free table
+
+- intent: ask_dilivery_time
+  examples: |
+    - For how long do i have to wait
+    - For how long do i have to wait unitl my food arrive
+    - How long does this take
+    - How long does my order take
+    - How long do i have to wait
   
 - intent: ask_food_price
   examples: |
@@ -180,6 +194,14 @@ nlu:
     - can i reserve
     - can i have a reservation
     - i want a reservation
+    - do you have a table for me
+
+- intent: orderfood
+  examples: |
+    - i would like to order something
+    - can i order
+    - can i order something
+    - i want to order something
 
 - intent: inform_time
   examples: |
@@ -191,6 +213,18 @@ nlu:
     - [3pm](time)
     - [2am](time)
     - [1am](time)
+
+- intent: inform_email
+  examples: |
+    - my email is [example@example.com](email)
+    - [random@randomrandom.de](email)
+    - [r.andom@gmx.de](email)
+    - [random123@aol.de](email)
+    - [random@gmail.de](email)
+    - [random123@web.de](email)
+    - [r.andom@mail.de](email)
+    - [something@example.com](email)
+    - Email is [random@example.de](email)
 
 - intent: inform_date
   examples: |
@@ -204,11 +238,247 @@ nlu:
     - [saturday](date)
     - [sunday](date)
 
+- intent: inform_selectedfood
+  examples: |
+    - [pizza](selectedfood)
+    - [paste](selectedfood)
+    - [dolce](selectedfood)
+    - [carne](selectedfood)
+    - [antipasti](selectedfood)
+
+- intent: inform_name
+  examples: |
+    -	[Liam](name)
+    -	[Olivia](name)
+    -	[Noah](name)
+    -	[Emma](name)
+    -	[Oliver](name)
+    -	[Charlotte](name)
+    -	[Elijah](name)
+    -	[Amelia](name)
+    -	[James](name)
+    -	[Ava](name)
+    -	[William](name)
+    -	[Sophia](name)
+    -	[Benjamin](name)
+    -	[Isabella](name)
+    -	[Lucas](name)
+    -	[Mia](name)
+    -	[Henry](name)
+    -	[Evelyn](name)
+    -	[Theodore](name)
+    -	[Harper](name)
+    -	[Emilia](name)
+    -	[Hanna](name)
+    -	[Mia](name)
+    -	[Emma](name)
+    -	[Sophia](name)
+    -	[Mila](name)
+    -	[Lina](name)
+    -	[Ella](name)
+    -	[Lea](name)
+    -	[Marie](name)
+    -	[Clara](name)
+    -	[Leni](name)
+    -	[Lia](name)
+    -	[Leonie](name)
+    -	[Emily](name)
+    -	[Mathilda](name)
+    -	[Ida](name)
+    -	[Anna](name)
+    -	[Frieda](name)
+    -	[Amelie](name)
+    -	[Luisa](name)
+    -	[Lilly](name)
+    -	[Maja](name)
+    -	[Charlotte](name)
+    -	[Lena](name)
+    -	[Sophie](name)
+    -	[Johanna](name)
+    -	[Lara](name)
+    -	[Nele](name)
+    -	[Nora](name)
+    -	[Mira](name)
+    -	[Sarah](name)
+    -	[Lotta](name)
+    -	[Juna](name)
+    -	[Laura](name)
+    -	[Elisa](name)
+    -	[Paula](name)
+    -	[Tilda](name)
+    -	[Malia](name)
+    -	[Thea](name)
+    -	[Maria](name)
+    -	[Romy](name)
+    -	[Melina](name)
+    -	[Alina](name)
+    -	[Marlene](name)
+    -	[Mara](name)
+    -	[Elena](name)
+    -	[Helena](name)
+    -	[Victoria](name)
+    -	[Carla](name)
+    -	[Luna](name)
+    -	[Antonia](name)
+    -	[Isabella](name)
+    -	[Merle](name)
+    -	[Elina](name)
+    -	[Zoe](name)
+    -	[Eva](name)
+    -	[Amira](name)
+    -	[Julia](name)
+    -	[Fiona](name)
+    -	[Luise](name)
+    -	[Hailey](name)
+    -	[Paulina](name)
+    -	[Martha](name)
+    -	[Finja](name)
+    -	[Josephine](name)
+    -	[Lisa](name)
+    -	[Pia](name)
+    -	[Elli](name)
+    -	[Olivia](name)
+    -	[Amalia](name)
+    -	[Valentina](name)
+    -	[Jana](name)
+    -	[Anni](name)
+    -	[Pauline](name)
+    -	[Rosalie](name)
+    -	[Carlotta](name)
+    -	[Theresa](name)
+    -	[Mina](name)
+    -	[Liya](name)
+    -	[Maila](name)
+    -	[Ronja](name)
+    -	[Isabell](name)
+    -	[Aaliyah](name)
+    -	[Chiara](name)
+    -	[Lotte](name)
+    -	[Leyla](name)
+    -	[Malea](name)
+    -	[Malina](name)
+    -	[Aurelia](name)
+    -	[Elisabeth](name)
+    -	[Amelia](name)
+    -	[Alma](name)
+    -	[Jasmin](name)
+    -	[Lucy](name)
+    -	[Linda](name)
+    -	[Katharina](name)
+    -	[Liana](name)
+    -	[Magdalena](name)
+    -	[Matteo](name)
+    -	[Noah](name)
+    -	[Leon](name)
+    -	[Finn](name)
+    -	[Elias](name)
+    -	[Paul](name)
+    -	[Ben](name)
+    -	[Luca](name)
+    -	[Emil](name)
+    -	[Louis](name)
+    -	[Theo](name)
+    -	[Felix](name)
+    -	[Henry](name)
+    -	[Jonas](name)
+    -	[Liam](name)
+    -	[Lukas](name)
+    -	[Leo](name)
+    -	[Anton](name)
+    -	[Jakob](name)
+    -	[Maximilian](name)
+    -	[Oskar](name)
+    -	[Levi](name)
+    -	[Moritz](name)
+    -	[Jannis](name)
+    -	[Milan](name)
+    -	[David](name)
+    -	[Max](name)
+    -	[Karl](name)
+    -	[Jonah](name)
+    -	[Lio](name)
+    -	[Mats](name)
+    -	[Mohammed](name)
+    -	[Samuel](name)
+    -	[Aaron](name)
+    -	[Adam](name)
+    -	[Alexander](name)
+    -	[Jonathan](name)
+    -	[Linus](name)
+    -	[Raphael](name)
+    -	[Julian](name)
+    -	[Niklas](name)
+    -	[Erik](name)
+    -	[Mika](name)
+    -	[Philipp](name)
+    -	[Milo](name)
+    -	[Hannes](name)
+    -	[Leonard](name)
+    -	[Tom](name)
+    -	[Valentin](name)
+    -	[Johann](name)
+    -	[Tim](name)
+    -	[Maxim](name)
+    -	[Adrian](name)
+    -	[Theodor](name)
+    -	[Joshua](name)
+    -	[Lian](name)
+    -	[Nico](name)
+    -	[Marlon](name)
+    -	[Toni](name)
+    -	[Vincent](name)
+    -	[Benjamin](name)
+    -	[Carlo](name)
+    -	[Malik](name)
+    -	[Jan](name)
+    -	[Kilian](name)
+    -	[Fabian](name)
+    -	[Fiete](name)
+    -	[Daniel](name)
+    -	[Konstantin](name)
+    -	[Simon](name)
+    -	[Arthur](name)
+    -	[Till](name)
+    -	[Julius](name)
+    -	[Gabriel](name)
+    -	[Jannik](name)
+    -	[Fritz](name)
+    -	[Mattis](name)
+    -	[Emilio](name)
+    -	[Johannes](name)
+    -	[Lennard](name)
+    -	[Ole](name)
+    -	[Matti](name)
+    -	[Arian](name)
+    -	[Levin](name)
+    -	[Malte](name)
+    -	[Ludwig](name)
+    -	[Nick](name)
+    -	[Bruno](name)
+    -	[Benedikt](name)
+    -	[Luke](name)
+    -	[Nils](name)
+    -	[Ali](name)
+    -	[Lasse](name)
+    -	[Miran](name)
+    -	[Elian](name)
+
+
 - intent: inform
   examples: |
     - [rock](choice)
     - [paper](choice)
     - [scissors](choice)
+
+- intent: inform_address
+  examples: |
+    - [Marktstraße 1 Pfullinegen](address)
+    - [Schulstraße 13 Reutlingen](address)
+    - [Altenburgstraße 133 Reutlingen](address)
+    - [Goetheweg 17 Pfullinegen](address)
+    - [Bismarktstraße 3 Eningen](address)
+    - [Kaiserstraße 133 Tübingen](address)
+    - [Königsstraße 99 Stuttgart](address)
 
 - intent: ask_play
   examples: |
@@ -221,8 +491,17 @@ responses:
   utter_ask_email:
   - text: "What is your email address?"
 
+  utter_ask_name:
+  - text: "What is your name?"
+
+  utter_ask_address:
+  - text: "Can you give me your address where you want your food to be dilivered?"
+
   utter_ask_date:
   - text: "Which day you want to come?"
+
+  utter_ask_selectedfood:
+  - text: "Want do you want to eat?"
 
   utter_ask_time:
   - text: "Which time?"
@@ -237,19 +516,23 @@ responses:
   - text: "We will try to accommodate your seating request. Unfortunately this is not always possible."
 
   utter_to_go_pizza:
-  - text: "Of cource you can take your pizza home."
+  - text: "Of cource you can take your food home."
+
+  utter_delivery_time:
+  - text: "We try our best to keep the dilivery time under 30 minutes."
+
 
   utter_delivery:
-  - text: "Unfortunately we do not offer a delivery service yet. We plan to test it in 2023."
+  - text: "Yes of course, just tell us that you would like to order something"
 
   utter_payment_methods:
-  - text: "We accept the following payment methods: cash, card, Bitcoin or you can wash our dishes ;)"
+  - text: "We accept the following payment methods: cash, card and paypal"
 
   utter_contact:
   - text: "You can call us (+49 123 456789)"
 
   utter_opening_hours:
-  - text: "We are open from Monday to Sunday between 3 pm and 11 pm."
+  - text: "We are open from Tuesday to Sunday between 3 pm and 11 pm."
 
   utter_location:
   - text: "Pizzaria Romano is in the Marktstraße 1, 72793 Pfullingen."

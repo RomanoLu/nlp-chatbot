@@ -48,3 +48,19 @@ stories:
   - action: utter_play_again
   - intent: deny
   - action: utter_goodbye
+
+- story: reserve table
+  steps:
+  - intent: reserve
+  - action: reservation_form
+  - active_loop: reservation_form
+  - active_loop: null
+  - action: action_confirm_reservation
+
+- story: order food
+  steps:
+  - intent: orderfood
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: action_confirm_order

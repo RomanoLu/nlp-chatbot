@@ -68,11 +68,11 @@ class ActionGiveFoodPrice(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dish_images = {
-            "iskender": "assets/iskender.jpg",
-            "cöpsis": "assets/coepsis.jpg",
-            "dürüm": "assets/dueruem.jpg",
-            "kaburga": "assets/kaburga.jpg",
-            "lahmacun": "assets/lahmacun.jpg"
+            "pizza": "assets/pizza.jpg",
+            "antipasti": "assets/Antipasti.jpg",
+            "dolce": "assets/Cannoli.jpg",
+            "pasta": "assets/carbonara.png",
+            "carne": "assets/Bistecca_alla_fiorentina.jpg"
         }
 
         if len(tracker.latest_message["entities"]) == 0:
@@ -118,6 +118,24 @@ class ActionConfirmReservation(Action):
         dispatcher.utter_message(text = message)
 
         return [AllSlotsReset()]
+
+class ActionConfirmOrder(Action):
+
+    def name(self) -> Text:
+        return "action_confirm_order"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        selectedfood = tracker.get_slot("selectedfood")
+
+        message = f"We have noted your order.\n{selectedfood} \n Your food will arrive in 30 Minutes"
+
+        dispatcher.utter_message(text = message)
+
+        return [AllSlotsReset()]
+
 
 class ActionPlayRPS(Action):
    

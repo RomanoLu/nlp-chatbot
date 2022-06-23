@@ -23,6 +23,13 @@ intents:
   - inform_time
   - ask_play
   - inform
+  - ask_seat_place_wishes
+  - reservation_form
+  - food_form
+  - orderfood
+  - inform_selectedfood
+  - inform_address
+  - inform_name
 
 entities:
 - dish
@@ -30,6 +37,9 @@ entities:
 - date
 - time
 - choice
+- selectedfood
+- address
+- name
 
 forms:
   reservation_form:
@@ -37,6 +47,12 @@ forms:
       - date
       - time
       - email
+  food_form:
+    required_slots:
+     - name
+     - address
+     - selectedfood
+     
 
 slots:
   date:
@@ -57,6 +73,24 @@ slots:
     mappings:
     - type: from_entity
       entity: email
+  address:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: address
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: name
+  selectedfood:
+    type: list
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: dish
   choice: 
     type: categorical
     values:
@@ -101,4 +135,5 @@ actions:
 - action_give_day
 - action_give_food_price
 - action_confirm_reservation
+- action_confirm_order
 - action_play_rps
