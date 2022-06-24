@@ -49,6 +49,15 @@ nlu:
     - no way
     - not really
 
+- intent: gratitude
+  examples: |
+    - thank you
+    - thanks
+    - cool
+    - Much obliged
+    - I appreciate it
+    - I appreciate this
+
 - intent: mood_great
   examples: |
     - perfect
@@ -129,6 +138,14 @@ nlu:
     - can i call someone
     - can i call you
 
+- intent: ask_knowledge
+  examples: |
+    - how can you help me
+    - what can you do
+    - what is your function
+    - what answers can you give me
+    - what questions can you answer
+
 - intent: ask_delivery
   examples: |
     - do you have delivery service
@@ -173,7 +190,7 @@ nlu:
     - How long does this take
     - How long does my order take
     - How long do i have to wait
-  
+ 
 - intent: ask_food_price
   examples: |
     - how much does [pizza](dish) cost
@@ -464,7 +481,7 @@ nlu:
     -	[Elian](name)
 
 
-- intent: inform
+- intent: inform_choice
   examples: |
     - [rock](choice)
     - [paper](choice)
@@ -482,14 +499,21 @@ nlu:
 
 - intent: ask_play
   examples: |
-      - can we play
-      - im boring
+      - can we play something
+      - im bored
       - lets play something
       - can you play rock paper scissors
 
 responses:
   utter_ask_email:
   - text: "What is your email address?"
+
+  utter_gratitude:
+  - text: "Youre welcome"
+  - text: "We are always here for you"
+  - text: "Thats our job"
+  - text: "We are happy as long as you are"
+
 
   utter_ask_name:
   - text: "What is your name?"
@@ -521,6 +545,8 @@ responses:
   utter_delivery_time:
   - text: "We try our best to keep the dilivery time under 30 minutes."
 
+  utter_knowledge:
+  - text: "You can ask me everything you want about our Restaurant. Additionaly you can reservate and order throught the Chat"
 
   utter_delivery:
   - text: "Yes of course, just tell us that you would like to order something"

@@ -6,8 +6,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: ask_knowledge
+  - action: utter_knowledge
+
 
 - story: sad path 1
   steps:
@@ -33,7 +34,7 @@ stories:
   steps:
   - intent: ask_play
   - action: utter_play
-  - intent: inform
+  - intent: inform_choice
   - action: action_play_rps
   - action: utter_play_again
 

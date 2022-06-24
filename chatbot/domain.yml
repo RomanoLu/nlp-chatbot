@@ -22,7 +22,7 @@ intents:
   - reserve
   - inform_time
   - ask_play
-  - inform
+  - inform_choice
   - ask_seat_place_wishes
   - reservation_form
   - food_form
@@ -30,6 +30,8 @@ intents:
   - inform_selectedfood
   - inform_address
   - inform_name
+  - ask_knowledge
+  - gratitude
 
 entities:
 - dish

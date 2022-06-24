@@ -22,6 +22,11 @@ rules:
   - intent: ask_location
   - action: utter_location
 
+- rule: Trigger Gratitude
+  steps:
+  - intent: gratitude
+  - action: utter_gratitude
+
 - rule: Trigger Restaurant Opening times
   steps:
   - intent: ask_opening_hours
@@ -36,6 +41,11 @@ rules:
   steps:
   - intent: ask_delivery
   - action: utter_delivery
+
+- rule: Trigger Bot Knowledge
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
 
 - rule: Trigger Restaurant food to go
   steps:
