@@ -4,8 +4,9 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-
-
+import json
+import requests
+from urllib.request import urlopen
 import datetime
 import pandas as pd
 from PIL import Image
@@ -136,6 +137,64 @@ class ActionConfirmOrder(Action):
 
         return [AllSlotsReset()]
 
+class ActionGiveWeather(Action):
+
+    def name(self) -> Text:
+        return "action_check_outdoor_places"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        try:
+            url = 'http://ipinfo.io/json'
+            response = urlopen(url)
+            data = json.load(response)
+
+            city = data['city']
+
+        except:
+            dispatcher.utter_message(text = "If the weather is good, of course you also can sit outside")
+            return []
+
+        try:
+            url = "https://community-open-weather-map.p.rapidapi.com/weather"
+
+            querystring = {"q":city,"units":"metric"}
+
+            headers = {
+                'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
+                'x-rapidapi-key': "425ee6975dmshef43068f62519e7p1c9496jsn0ff6d4e77085"
+                }
+
+            response = requests.request("GET", url, headers=headers, params=querystring)
+
+            data = response.json()
+        
+        except:
+            dispatcher.utter_message(text = f"If the weather in {city} is good, of course you also can sit outside")
+            return []
+
+        if data["weather"][0]["main"] == "Snow":
+            weather = f"Unfortunately its snowing in {city}, i would reccomend a place inside our Restaurant"
+        elif data["weather"][0]["main"] == "Rain":
+            weather = f"Unfortunately its raining in {city}, i would reccomend a place inside our Restaurant"
+
+        else:
+            weather = f"We have {data['weather'][0]['main']}."
+
+        if data["main"]["temp"] <= 18.0:
+            temperature = f"The temperature is currently {data['main']['temp']} degrees Celsius and it almoust feels like {data['main']['feels_like']} degrees. So i would advise against a outdoor place."
+        elif data["main"]["temp"] >= 25.0:
+            temperature = f"The temperature is currently {data['main']['temp']} degrees Celsius. Thats the perfect weather, to enjoy a cold drink at our tarrace."
+        else:
+            temperature = f"I looked up bthe weather for you and it says that there {data['main']['temp']} degrees Celsius. If thats enought for you, you can sit outside."
+
+        message = f"{weather} {temperature}"
+
+        dispatcher.utter_message(text = message)
+
+        return []
 
 class ActionPlayRPS(Action):
    

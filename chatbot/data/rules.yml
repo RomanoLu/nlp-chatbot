@@ -12,10 +12,36 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Trigger Day Today
+- rule: Trigger Smalltalk
   steps:
-  - intent: ask_day
-  - action: action_give_day
+  - intent: smalltalk
+  - action: utter_smalltalk 
+
+- rule: Trigger give Opinion
+  steps:
+  - intent: give_opinion
+  - action: utter_opinion 
+
+- rule: Trigger Outdoor seats
+  steps:
+  - intent: ask_outdoorseat
+  - action: action_check_outdoor_places
+
+- rule: Trigger Parking
+  steps:
+  - intent: ask_parking
+  - action: utter_parking
+
+- rule: Trigger Payments
+  steps:
+  - intent: ask_payments
+  - action: utter_payments
+
+- rule: Trigger Vegetarian
+  steps:
+  - intent: ask_vegetarian
+  - action: utter_vegetarian
+
 
 - rule: Trigger Restaurant Location
   steps:

@@ -7,12 +7,17 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - bot_challenge
+  - smalltalk
+  - give_opinion
+  - ask_outdoorseat
   - ask_day
   - ask_location
   - ask_opening_hours
   - ask_contact
+  - ask_parking
   - ask_delivery
+  - ask_payments
+  - ask_vegetarian
   - aks_to_go_pizza
   - aks_reservation
   - ask_menu_card
@@ -105,7 +110,7 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hello welcome to Pizzaria Romano, how can i help you?"
+  - text: "Hello welcome to Pizzaria Romano. Im the Chatbot Domenico, how can i help you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -120,15 +125,6 @@ responses:
   utter_goodbye:
   - text: "Bye"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  utter_play:
-  - text: "Type 'rock', 'paper' or 'scissor' to play."
-
-  utter_play_again:
-  - text: "Do you want to play again?"
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -139,3 +135,4 @@ actions:
 - action_confirm_reservation
 - action_confirm_order
 - action_play_rps
+- action_check_outdoor_places

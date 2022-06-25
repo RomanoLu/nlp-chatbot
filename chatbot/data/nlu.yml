@@ -92,14 +92,6 @@ nlu:
     - so saad
     - so sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - who are you?
-
 - intent: ask_location
   examples: |
     - where is your restaurant
@@ -257,11 +249,17 @@ nlu:
 
 - intent: inform_selectedfood
   examples: |
-    - [pizza](selectedfood)
-    - [paste](selectedfood)
-    - [dolce](selectedfood)
-    - [carne](selectedfood)
-    - [antipasti](selectedfood)
+    - [pizza margherita](selectedfood)
+    - [pizza salami](selectedfood)
+    - [pizza frutti di mare](selectedfood)
+    - [pizza prosciutto](selectedfood)
+    - [pizza prosciutto e funghi](selectedfood)
+    - [spaghetti bolognese](selectedfood)
+    - [spaghetti carbonara](selectedfood)
+    - [Tortellini alla Panna](selectedfood)
+    - [Cannoli](selectedfood)
+    - [Bistecca](selectedfood)
+    - [antipasti allla casa](selectedfood)
 
 - intent: inform_name
   examples: |
@@ -497,6 +495,107 @@ nlu:
     - [Kaiserstraße 133 Tübingen](address)
     - [Königsstraße 99 Stuttgart](address)
 
+- intent: smalltalk/ask_mood
+  examples: |
+      - how are you?
+      - everything alright?
+      - how are you doing?
+      - are you well?
+
+- intent: smalltalk/bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you?
+    - who are you?
+    - are you a real human
+
+- intent: smalltalk/ask_help
+  examples: |
+    - I have a question
+    - I need help
+    - I need your help
+    - I would appreciate your knowledge on this topic
+    - I need a quick bit of help
+    - I could use some help
+    - do you have a minute?
+    - can you do me a favor
+    - can you help me?
+    - can you help me out?
+
+- intent: smalltalk/ask_handlingdata
+  examples: |
+    - what do you do with my data
+    - do you save what I say
+    - are you saving data
+    - do you save my questions
+    - do you save our chat
+    - how do you handle my data
+    - do you handle my data regarding data regulatories
+
+- intent: give_opinion
+  examples: |
+    - the food was very delicious
+    - your food tasted awesome
+    - i did not like my pizza
+    - i did not like my pasta
+    - i did not like my dessert
+    - the food did not taste well
+    - your food is trash
+    - the food was awful
+    - the price-performance is not good
+    - the price-performance is very good
+    - the personal was unfriendly
+    - the personal was kind
+    - the personal was very rude
+
+- intent: ask_parking
+  examples: |
+    - do you have parking spots
+    - where can i park
+    - can i park there
+    - where can i park my car
+    - do you have free parking
+
+- intent: ask_invoice
+  examples: |
+    - can i have a receipt
+    - can i get an invoice
+    - receipt
+    - invoice
+    - i need a receipt
+    - i need a invoice
+
+
+- intent: ask_payments
+  examples: |
+    - how can you pay
+    - how do i pay
+    - which payment methods do you have
+    - can i pay cash
+    - can i pay with card
+    - do you accept paypal
+
+- intent: ask_vegetarian
+  examples: | 
+    - do you have something ask_vegetarian
+    - do you offer something vegan
+    - do you have vegetarian dished
+    - i am vegan
+    - i am vegegatrian
+    - i dont want to eat any animal based food
+
+
+- intent: ask_outdoorseat
+  examples: |
+    - do you have outdoor seats?
+    - do you have a terrace or something?
+    - can i only sit insinde?
+    - i would like to sit outside
+    - can we have a table outside of the restaurant
+
 - intent: ask_play
   examples: |
       - can we play something
@@ -505,6 +604,7 @@ nlu:
       - can you play rock paper scissors
 
 responses:
+
   utter_ask_email:
   - text: "What is your email address?"
 
@@ -513,7 +613,6 @@ responses:
   - text: "We are always here for you"
   - text: "Thats our job"
   - text: "We are happy as long as you are"
-
 
   utter_ask_name:
   - text: "What is your name?"
@@ -534,7 +633,7 @@ responses:
   - text: "You can look at our Menu here: ...."
 
   utter_invoice:
-  - text: "You will always get an invoice after ordering something."
+  - text: "You will always get an invoice/receipt after ordering something."
 
   utter_seat_place_wishes:
   - text: "We will try to accommodate your seating request. Unfortunately this is not always possible."
@@ -551,14 +650,41 @@ responses:
   utter_delivery:
   - text: "Yes of course, just tell us that you would like to order something"
 
-  utter_payment_methods:
-  - text: "We accept the following payment methods: cash, card and paypal"
+  utter_payments:
+  - text: "We accept cash, card and paypal"
 
   utter_contact:
-  - text: "You can call us (+49 123 456789)"
+  - text: "You can call us at (+49 123 456789) or you can just talk to me :)"
 
   utter_opening_hours:
-  - text: "We are open from Tuesday to Sunday between 3 pm and 11 pm."
+  - text: "We are open from Tuesday to Sunday between 11 am and 12 pm."
+
+  utter_vegetarian:
+  - text: "Yes of course, my favorit vegan dish is the Pizza Marinara, thats a pizza without cheese, only with sauce."
 
   utter_location:
-  - text: "Pizzaria Romano is in the Marktstraße 1, 72793 Pfullingen."
+  - text: "Pizzaria Romano is located in: Marktstraße 1, 72793 Pfullingen."
+
+  utter_opinion:
+  - text: "We do our best to satisfy your wishes. If you really care about giving feedback, just call us."
+
+  utter_parking:
+  - text: "We have wonderful free Parking spots right infront of our restaurant."
+
+  utter_smalltalk/bot_challenge:
+  - text: "What do you think? :)"
+
+  utter_smalltalk/ask_mood:
+  - text: "Im glad that you aksed, im a little bit stressed but anyways i have fun at work :)"
+
+  utter_smalltalk/ask_help:
+  - text: "We are always there for you! Just aks me your questions"
+
+  utter_smalltalk/ask_handlingdata:
+  - text: "No worries. The chat and your messages will not be saved, i only telling the chef what you wanna eat."
+
+  utter_play:
+  - text: "Type 'rock', 'paper' or 'scissor' to play."
+
+  utter_play_again:
+  - text: "Do you want to play again?"
