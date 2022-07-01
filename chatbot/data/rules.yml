@@ -32,10 +32,20 @@ rules:
   - intent: ask_parking
   - action: utter_parking
 
+- rule: Trigger Dilivery time
+  steps: 
+  - intent: ask_dilivery_time
+  - action: utter_dilivery_time
+
 - rule: Trigger Payments
   steps:
   - intent: ask_payments
   - action: utter_payments
+
+- rule: Trigger Invoice
+  steps:
+  - intent: ask_invoice
+  - action: utter_invoice
 
 - rule: Trigger Vegetarian
   steps:

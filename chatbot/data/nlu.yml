@@ -630,7 +630,7 @@ responses:
   - text: "Which time?"
 
   utter_menu_card:
-  - text: "You can look at our Menu here: ...."
+  - text: "You can look at our Menu here: https://reutlingenuniversityde-my.sharepoint.com/:b:/g/personal/luca_romano_student_reutlingen-university_de/EUv_nmgw0uRKmW2VOjoG0JwBtHQj7SkVtyCk5cygM55EmA?e=FEZAvk"
 
   utter_invoice:
   - text: "You will always get an invoice/receipt after ordering something."
@@ -641,7 +641,7 @@ responses:
   utter_to_go_pizza:
   - text: "Of cource you can take your food home."
 
-  utter_delivery_time:
+  utter_dilivery_time:
   - text: "We try our best to keep the dilivery time under 30 minutes."
 
   utter_knowledge:

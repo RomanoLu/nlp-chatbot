@@ -16,6 +16,8 @@ intents:
   - ask_contact
   - ask_parking
   - ask_delivery
+  - ask_dilivery_time
+  - ask_invoice
   - ask_payments
   - ask_vegetarian
   - aks_to_go_pizza

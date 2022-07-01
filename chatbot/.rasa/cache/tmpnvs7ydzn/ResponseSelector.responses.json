@@ -1,0 +1,146 @@
+{
+  "utter_ask_email": [
+    {
+      "text": "What is your email address?"
+    }
+  ],
+  "utter_gratitude": [
+    {
+      "text": "Youre welcome"
+    },
+    {
+      "text": "We are always here for you"
+    },
+    {
+      "text": "Thats our job"
+    },
+    {
+      "text": "We are happy as long as you are"
+    }
+  ],
+  "utter_ask_name": [
+    {
+      "text": "What is your name?"
+    }
+  ],
+  "utter_ask_address": [
+    {
+      "text": "Can you give me your address where you want your food to be dilivered?"
+    }
+  ],
+  "utter_ask_date": [
+    {
+      "text": "Which day you want to come?"
+    }
+  ],
+  "utter_ask_selectedfood": [
+    {
+      "text": "Want do you want to eat?"
+    }
+  ],
+  "utter_ask_time": [
+    {
+      "text": "Which time?"
+    }
+  ],
+  "utter_menu_card": [
+    {
+      "text": "You can look at our Menu here: https://reutlingenuniversityde-my.sharepoint.com/:b:/g/personal/luca_romano_student_reutlingen-university_de/EUv_nmgw0uRKmW2VOjoG0JwBtHQj7SkVtyCk5cygM55EmA?e=FEZAvk"
+    }
+  ],
+  "utter_invoice": [
+    {
+      "text": "You will always get an invoice/receipt after ordering something."
+    }
+  ],
+  "utter_seat_place_wishes": [
+    {
+      "text": "We will try to accommodate your seating request. Unfortunately this is not always possible."
+    }
+  ],
+  "utter_to_go_pizza": [
+    {
+      "text": "Of cource you can take your food home."
+    }
+  ],
+  "utter_dilivery_time": [
+    {
+      "text": "We try our best to keep the dilivery time under 30 minutes."
+    }
+  ],
+  "utter_knowledge": [
+    {
+      "text": "You can ask me everything you want about our Restaurant. Additionaly you can reservate and order throught the Chat"
+    }
+  ],
+  "utter_delivery": [
+    {
+      "text": "Yes of course, just tell us that you would like to order something"
+    }
+  ],
+  "utter_payments": [
+    {
+      "text": "We accept cash, card and paypal"
+    }
+  ],
+  "utter_contact": [
+    {
+      "text": "You can call us at (+49 123 456789) or you can just talk to me :)"
+    }
+  ],
+  "utter_opening_hours": [
+    {
+      "text": "We are open from Tuesday to Sunday between 11 am and 12 pm."
+    }
+  ],
+  "utter_vegetarian": [
+    {
+      "text": "Yes of course, my favorit vegan dish is the Pizza Marinara, thats a pizza without cheese, only with sauce."
+    }
+  ],
+  "utter_location": [
+    {
+      "text": "Pizzaria Romano is located in: Marktstraße 1, 72793 Pfullingen."
+    }
+  ],
+  "utter_opinion": [
+    {
+      "text": "We do our best to satisfy your wishes. If you really care about giving feedback, just call us."
+    }
+  ],
+  "utter_parking": [
+    {
+      "text": "We have wonderful free Parking spots right infront of our restaurant."
+    }
+  ],
+  "utter_smalltalk/bot_challenge": [
+    {
+      "text": "What do you think? :)"
+    }
+  ],
+  "utter_smalltalk/ask_mood": [
+    {
+      "text": "Im glad that you aksed, im a little bit stressed but anyways i have fun at work :)"
+    }
+  ],
+  "utter_smalltalk/ask_help": [
+    {
+      "text": "We are always there for you! Just aks me your questions"
+    }
+  ],
+  "utter_smalltalk/ask_handlingdata": [
+    {
+      "text": "No worries. The chat and your messages will not be saved, i only telling the chef what you wanna eat."
+    }
+  ],
+  "utter_play": [
+    {
+      "text": "Type 'rock', 'paper' or 'scissor' to play."
+    }
+  ],
+  "utter_play_again": [
+    {
+      "text": "Do you want to play again?"
+    }
+  ]
+}
